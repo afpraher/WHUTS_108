@@ -8,17 +8,28 @@ float camRX = 0;
 float camRY = 0;
 float camD = 500;
 
-color c_unfolding = color(255,140,0);
-color c_tiling_x0 = color(50,205,50);
-color c_tiling_x1 = color(0,191,255);
-color c_tiling_z = color(186,85,211);
-color c_tiling_y = color(178,34,34);
+color c_unfolding;
+color c_tiling_x0;
+color c_tiling_x1;
+color c_tiling_z;
+color c_tiling_y;
 
-int stage = 0;
+int stage;
 
 void setup() {
   size(500, 500, P3D);
-  //noLoop();
+  
+  camRX = 0;
+  camRY = 0;
+  camD = 500;
+  
+  c_unfolding = color(255,140,0);
+  c_tiling_x0 = color(50,205,50);
+  c_tiling_x1 = color(0,191,255);
+  c_tiling_z = color(186,85,211);
+  c_tiling_y = color(178,34,34);
+  
+  stage = 0;
 }
 
 void draw() {
